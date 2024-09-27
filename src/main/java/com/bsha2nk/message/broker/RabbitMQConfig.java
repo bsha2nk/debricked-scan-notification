@@ -27,7 +27,7 @@ public class RabbitMQConfig {
 	@Value("${notification.exchange}")
 	private String notificationQueue;
 
-	@Value("${nottification.routing-key}")
+	@Value("${notification.routing-key}")
 	private String notificationRoutingKey;
 
 	@Bean
