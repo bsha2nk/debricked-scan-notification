@@ -26,3 +26,5 @@
 
 ### Architecture
 Of the 2 Java services, one is used to receive files from the use, upload it to Debricked, start the scan and save scan details to the MySQL database. In order to send notifications at various stages of scans it uses RabbitMQ message broker to communicate with the other Java service which is the notification system. The notification service receives the event and message and sends an email and a Slack message. If either email or Slack message fails then it does not acknwoledge the RabbitMQ message so that it can be re-tried again. If both notifications were sent successfully then the message in the message queue is removed.
+
+![Architecture](https://github.com/user-attachments/assets/f9e24112-b0a0-4239-860d-8602ebfd3569)
